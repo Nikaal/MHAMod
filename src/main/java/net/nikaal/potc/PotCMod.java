@@ -1,21 +1,12 @@
 package net.nikaal.potc;
 
+import net.minecraft.world.item.*;
+import net.nikaal.potc.item.ModCreativeModeTabs;
+import net.nikaal.potc.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -25,14 +16,10 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(PotC.MOD_ID)
-public class PotC {
+@Mod(PotCMod.MOD_ID)
+public class PotCMod {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "potc";
     // Directly reference a slf4j logger
@@ -40,7 +27,7 @@ public class PotC {
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public PotC(IEventBus modEventBus, ModContainer modContainer) {
+    public PotCMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -48,6 +35,12 @@ public class PotC {
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        // Register the creative mode tab
+        ModCreativeModeTabs.register(modEventBus);
+
+        // Register the items
+        ModItems.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -62,7 +55,21 @@ public class PotC {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.PIRATE_COMPASS);
+        }
 
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.DIAL);
+            event.accept(ModItems.NEEDLE);
+            event.accept(ModItems.CASING);
+            event.accept(ModItems.SCREW);
+            event.accept(ModItems.GEAR);
+            event.accept(ModItems.PIVOT);
+            event.accept(ModItems.BEARING);
+            event.accept(ModItems.LENS);
+            event.accept(ModItems.CELL);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

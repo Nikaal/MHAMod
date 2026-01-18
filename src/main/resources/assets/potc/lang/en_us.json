@@ -1,0 +1,24 @@
+{
+  "itemGroup.potc": "PotC Tab",
+
+  "creativetab.potc": "PotC",
+
+  "item.potc.pirate_compass": "Pirate's Compass",
+  "item.potc.dial": "Dial",
+  "item.potc.needle": "Needle",
+  "item.potc.casing": "Casing",
+  "item.potc.screw": "Screw",
+  "item.potc.gear": "Gear",
+  "item.potc.pivot": "Pivot",
+  "item.potc.bearing": "Bearing",
+  "item.potc.lens": "Lens",
+  "item.potc.cell": "Cell",
+
+  "potc.configuration.title": "PotC Configs",
+  "potc.configuration.section.potc.common.toml": "PotC Configs",
+  "potc.configuration.section.potc.common.toml.title": "PotC Configs",
+  "potc.configuration.items": "Item List",
+  "potc.configuration.logDirtBlock": "Log Dirt Block",
+  "potc.configuration.magicNumberIntroduction": "Magic Number Text",
+  "potc.configuration.magicNumber": "Magic Number"
+}

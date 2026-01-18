@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_nugget"
+    },
+    "S": {
+      "item": "minecraft:oak_slab"
+    }
+  },
+  "pattern": [
+    "   ",
+    " I ",
+    "SSS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "potc:dial"
+  }
+}
