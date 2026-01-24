@@ -1,6 +1,7 @@
 package net.nikaal.potc;
 
 import net.minecraft.world.item.*;
+import net.nikaal.potc.event.TreasureMapCraftHandler;
 import net.nikaal.potc.item.ModCreativeModeTabs;
 import net.nikaal.potc.item.ModItems;
 import org.slf4j.Logger;
@@ -35,6 +36,7 @@ public class PotCMod {
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.register(new TreasureMapCraftHandler());
 
         // Register the creative mode tab
         ModCreativeModeTabs.register(modEventBus);
@@ -57,6 +59,7 @@ public class PotCMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.PIRATE_COMPASS);
+            event.accept(ModItems.TREASURE_MAP);
         }
 
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
@@ -69,6 +72,15 @@ public class PotCMod {
             event.accept(ModItems.BEARING);
             event.accept(ModItems.LENS);
             event.accept(ModItems.CELL);
+            event.accept(ModItems.MAP_PIECE_1);
+            event.accept(ModItems.MAP_PIECE_2);
+            event.accept(ModItems.MAP_PIECE_3);
+            event.accept(ModItems.MAP_PIECE_4);
+            event.accept(ModItems.MAP_PIECE_5);
+            event.accept(ModItems.MAP_PIECE_6);
+            event.accept(ModItems.MAP_PIECE_7);
+            event.accept(ModItems.MAP_PIECE_8);
+            event.accept(ModItems.MAP_PIECE_9);
         }
     }
 

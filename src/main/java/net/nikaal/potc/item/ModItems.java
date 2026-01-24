@@ -41,6 +41,36 @@ public class ModItems {
     public static final DeferredItem<Item> CELL = ITEMS.register("cell",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> MAP_PIECE_1 = ITEMS.register("map_piece_1",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> MAP_PIECE_2 = ITEMS.register("map_piece_2",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> MAP_PIECE_3 = ITEMS.register("map_piece_3",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> MAP_PIECE_4 = ITEMS.register("map_piece_4",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> MAP_PIECE_5 = ITEMS.register("map_piece_5",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> MAP_PIECE_6 = ITEMS.register("map_piece_6",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> MAP_PIECE_7 = ITEMS.register("map_piece_7",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> MAP_PIECE_8 = ITEMS.register("map_piece_8",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> MAP_PIECE_9 = ITEMS.register("map_piece_9",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> TREASURE_MAP = ITEMS.register("treasure_map",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
