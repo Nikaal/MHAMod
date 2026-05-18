@@ -1,11 +1,14 @@
 package net.nikaal.mhamod.event;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.MapItem;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.saveddata.maps.MapDecorationTypes;
 import net.minecraft.world.level.saveddata.maps.MapItemSavedData;
@@ -45,6 +48,16 @@ public class TreasureMapCraftHandler {
                 true
         );
 
+        // Tag custom
+        CompoundTag tag = new CompoundTag();
+        tag.putBoolean("mhamod_treasure_map", true);
+
+        treasureMap.set(
+                DataComponents.CUSTOM_DATA,
+                CustomData.of(tag)
+        );
+
+        // Croix rouge
         MapItemSavedData data = MapItem.getSavedData(treasureMap, level);
         if (data != null) {
             data.addTargetDecoration(
