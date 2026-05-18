@@ -1,0 +1,35 @@
+{
+  "itemGroup.mhamod": "MHAMod Tab",
+
+  "creativetab.mhamod": "MHAMod",
+
+  "item.mhamod.adventurer_compass": "Adventurer's Compass",
+  "item.mhamod.dial": "Dial",
+  "item.mhamod.needle": "Needle",
+  "item.mhamod.casing": "Casing",
+  "item.mhamod.screw": "Screw",
+  "item.mhamod.gear": "Gear",
+  "item.mhamod.pivot": "Pivot",
+  "item.mhamod.bearing": "Bearing",
+  "item.mhamod.lens": "Lens",
+  "item.mhamod.cell": "Cell",
+
+  "item.mhamod.map_piece_1": "Map Piece 1",
+  "item.mhamod.map_piece_2": "Map Piece 2",
+  "item.mhamod.map_piece_3": "Map Piece 3",
+  "item.mhamod.map_piece_4": "Map Piece 4",
+  "item.mhamod.map_piece_5": "Map Piece 5",
+  "item.mhamod.map_piece_6": "Map Piece 6",
+  "item.mhamod.map_piece_7": "Map Piece 7",
+  "item.mhamod.map_piece_8": "Map Piece 8",
+  "item.mhamod.map_piece_9": "Map Piece 9",
+  "item.mhamod.treasure_map": "Treasure Map",
+
+  "mhamod.configuration.title": "MHAMod Configs",
+  "mhamod.configuration.section.mhamod.common.toml": "MHAMod Configs",
+  "mhamod.configuration.section.mhamod.common.toml.title": "MHAMod Configs",
+  "mhamod.configuration.items": "Item List",
+  "mhamod.configuration.logDirtBlock": "Log Dirt Block",
+  "mhamod.configuration.magicNumberIntroduction": "Magic Number Text",
+  "mhamod.configuration.magicNumber": "Magic Number"
+}
