@@ -15,7 +15,7 @@ public class ModCreativeModeTabs {
 
     public static final Supplier<CreativeModeTab> MHAMOD_TAB = CREATIVE_MODE_TAB.register("mhamod",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModItems.TREASURE_MAP.get()))
+                    .icon(() -> new ItemStack(ModItems.ENCODED_TREASURE_MAP.get()))
                     .title(Component.translatable("creativetab.mhamod"))
                     .displayItems(((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ADVENTURER_COMPASS);
@@ -37,7 +37,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.MAP_PIECE_7);
                         output.accept(ModItems.MAP_PIECE_8);
                         output.accept(ModItems.MAP_PIECE_9);
-                        output.accept(ModItems.TREASURE_MAP);
+                        output.accept(ModItems.ENCODED_TREASURE_MAP);
                     }))
                     .build());
 

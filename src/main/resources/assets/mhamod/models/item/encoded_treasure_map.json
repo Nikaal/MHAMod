@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "mhamod:item/treasure_map"
+    "layer0": "mhamod:item/encoded_treasure_map"
   }
 }

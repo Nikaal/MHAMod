@@ -17,6 +17,7 @@
     "I": { "item": "mhamod:map_piece_9" }
   },
   "result": {
-    "id": "mhamod:treasure_map"
+    "id": "mhamod:encoded_treasure_map",
+    "count": 1
   }
 }

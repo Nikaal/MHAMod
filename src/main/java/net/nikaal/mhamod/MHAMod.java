@@ -1,7 +1,6 @@
 package net.nikaal.mhamod;
 
 import net.minecraft.world.item.*;
-import net.nikaal.mhamod.event.TreasureMapCraftHandler;
 import net.nikaal.mhamod.item.ModCreativeModeTabs;
 import net.nikaal.mhamod.item.ModItems;
 import org.slf4j.Logger;
@@ -36,7 +35,6 @@ public class MHAMod {
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
-        NeoForge.EVENT_BUS.register(new TreasureMapCraftHandler());
 
         // Register the creative mode tab
         ModCreativeModeTabs.register(modEventBus);
@@ -59,7 +57,7 @@ public class MHAMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.ADVENTURER_COMPASS);
-            event.accept(ModItems.TREASURE_MAP);
+            event.accept(ModItems.ENCODED_TREASURE_MAP);
         }
 
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {

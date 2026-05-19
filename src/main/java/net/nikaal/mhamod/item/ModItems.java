@@ -6,6 +6,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.nikaal.mhamod.MHAMod;
 import net.nikaal.mhamod.item.custom.AdventurerCompassItem;
+import net.nikaal.mhamod.item.custom.EncodedTreasureMapItem;
 
 public class ModItems {
 
@@ -68,8 +69,8 @@ public class ModItems {
     public static final DeferredItem<Item> MAP_PIECE_9 = ITEMS.register("map_piece_9",
             () -> new Item(new Item.Properties()));
 
-    public static final DeferredItem<Item> TREASURE_MAP = ITEMS.register("treasure_map",
-            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ENCODED_TREASURE_MAP = ITEMS.register("encoded_treasure_map",
+            () -> new EncodedTreasureMapItem(new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

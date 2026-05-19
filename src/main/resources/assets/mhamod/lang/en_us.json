@@ -23,7 +23,9 @@
   "item.mhamod.map_piece_7": "Map Piece 7",
   "item.mhamod.map_piece_8": "Map Piece 8",
   "item.mhamod.map_piece_9": "Map Piece 9",
-  "item.mhamod.treasure_map": "Treasure Map",
+  "item.mhamod.encoded_treasure_map": "Encoded Treasure Map",
+
+  "tooltip.mhamod.encoded_treasure_map": "Use (right click) to get the true treasure map.",
 
   "mhamod.configuration.title": "MHAMod Configs",
   "mhamod.configuration.section.mhamod.common.toml": "MHAMod Configs",
