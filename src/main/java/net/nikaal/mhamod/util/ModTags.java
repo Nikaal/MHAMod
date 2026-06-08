@@ -19,6 +19,9 @@ public class ModTags {
 
     public static class Items {
 
+        public static final TagKey<Item> MHAMOD_ITEMS = createTag("mhamod_items");
+        public static final TagKey<Item> MHAMOD_TROPHIES = createTag("mhamod_trophies");
+        public static final TagKey<Item> MHAMOD_SPAWN_EGGS = createTag("mhamod_spawn_eggs");
         public static final TagKey<Item> POTC_ITEMS = createTag("potc_items");
         public static final TagKey<Item> POTC_MAP_PIECES = createTag("potc_map_pieces");
         public static final TagKey<Item> POTC_COMPASS_PIECES = createTag("potc_compass_pieces");
